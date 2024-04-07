@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        * {
+            margin: 0;
+            outline: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .go-right {
+    display: flex;
+    overflow: hidden;
+    width: 64px; /* Lebar total SVG */
+}
+
+.go-right i {
+    opacity: 0; /* Mulai dari keadaan tidak terlihat */
+    animation: fade-in-out 3s linear infinite; /* Ubah '4s' menjadi waktu yang Anda inginkan untuk setiap siklus */
+}
+
+.go-right i:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.go-right i:nth-child(2) {
+    animation-delay: 1s; /* Menampilkan setelah 1 detik */
+}
+
+.go-right i:nth-child(3) {
+    animation-delay: 2s; /* Menampilkan setelah 2 detik */
+}
+
+@keyframes fade-in-out {
+    0%, 100% {
+        opacity: 0; /* Mulai dan akhir dari animasi, tidak terlihat */
+    }
+    50% {
+        opacity: 1; /* Tengah animasi, terlihat sepenuhnya */
+    }
+}
+.go-left {
+    display: flex;
+    overflow: hidden;
+    width: 64px;
+    justify-content: flex-end;
+}
+
+.go-left i {
+    opacity: 0; /* Mulai dari keadaan tidak terlihat */
+    animation: fade-in-out 3s linear infinite; /* Ubah '4s' menjadi waktu yang Anda inginkan untuk setiap siklus */
+}
+
+.go-left i:nth-child(1) {
+    animation-delay: 2s; /* Menampilkan setelah 3 detik */
+}
+
+.go-left i:nth-child(2) {
+    animation-delay: 1s; /* Menampilkan setelah 2 detik */
+}
+
+.go-left i:nth-child(3) {
+    animation-delay: 0s; /* Menampilkan setelah 1 detik */
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    background-color: #fcf5eb;
+    background: url(https://cdn.jsdelivr.net/gh/cdncomputing/bungkus@main/wa/wa-bg.webp) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: #fcf5eb;
+}
+header {
+    width: 92%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: url(https://cdn.jsdelivr.net/gh/cdncomputing/bungkus@main/wa/wa-banner.webp) no-repeat center;
+    background-size: cover;
+    height: 12em;
+    margin-bottom: 3.5em;
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+.share {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    background: #ffffff;
+    border-radius: 100%;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    cursor: pointer;
+    z-index: 3;
+}
+.share svg {
+    fill: #000;
+}
+article {
+    max-width: 450px;
+    width: 90%;
+}
+article a {
+    background: #26d266;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em 0.75em;
+    position: relative;
+    width: 100%;
+    border-radius: 5em;
+    font-size: 1.1em;
+    font-weight: 500;
+    justify-content: center;
+    color: #fff;
+}
+article a .go-left {
+    position: absolute;
+    right: 0.5em;
+    color: #fff;
+}
+article a .go-right {
+    position: absolute;
+    left: 0.5em;
+    color: #fff;
+}
+
+aside {
+            width: 95%;
+    max-width: 500px;
+    position: fixed;
+    z-index: 7;
+    bottom: 1em;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0%);
+    background: #fff;
+    border: 1px solid #3b505a;
+    border-radius: 0.5em;
+    box-shadow: 6px 7px 0px #3b505a;
+    padding: 1em;
+    transition: none;
+        }
+        .box-share {
+            position: relative;
+    padding-top: 2.5em;
+        }
+        #close_aside {
+            position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 100%;
+    height: 5vh;
+    width: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background: #d1d1d1;
+    box-shadow: 2px 3px 0px #3b505a;
+        }
+        .box-share h3 {
+            font-weight: 500;
+    font-size: large;
+    margin-bottom: 0.25em;
+        }
+        .box-share p {
+            color: #000;
+            font-size: 15px;
+        }
+        .salin {
+            position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-top: 1em;
+    border-radius: 5em;
+    overflow: hidden;
+        }
+        .salin input {
+            width: 100%;
+    border-radius: 5em;
+    outline: none;
+    font-size: medium;
+    padding: 0.75em 1em;
+    border: 1px solid #000;
+    background: #f6f7f5;
+    font-family: inherit;
+    transition: all 0.3s ease-out;
+        }
+        .salin .copy {
+            position: absolute;
+    right: 1%;
+    width: 7em;
+    text-align: center;
+    height: 88%;
+    background: #00f;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5em;
+    color: #fff;
+    font-size: medium;
+    cursor: pointer;
+        }
+        aside .copy svg {
+            fill: #fff;
+        }
+        .sharesosmed {
+            display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+        }
+        .sharesosmed a {
+            background: #fff;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5em;
+    border: 1px solid #3b505a;
+    border-radius: 0.5em;
+    box-shadow: 6px 7px 0px #3b505a;
+    cursor: pointer;
+        }
+        .box-share h4 {
+            text-align: center;
+    margin-bottom: 0.5em;
+        }
+        #qrcode {
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+        }
+        #closeaside {
+            width: 100%;
+    border-radius: 5em;
+    outline: none;
+    font-size: medium;
+    padding: 0.75em 1em;
+    border: 1px solid #787878;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    margin-top: 2em;
+    color: #000;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 6px 7px 0px #3b505a;
+        }
+        backdrop {
+            position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000059;
+    z-index: 6;
+    transition: none;
+        }
+        footer{
+            position: fixed;
+    bottom: 1em;
+    font-size: 16px;
+    color: #363636;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25em;
+        }
+        dialog {
+            position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    border: none;
+        }
+        .ads-box {
+            width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 0px 0.25em 0px 0px;
+        }
+        .ads-close {
+            position: absolute;
+    left: 0;
+    background: #fafafa;
+    top: -1.5em;
+    width: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0.5em 0px 0px;
+    cursor: pointer;
+        }
+        .ads-close svg {
+            fill: #616161;
+        }
+        .rotate svg {
+            transform: rotate(180deg);
+        }
+        .ads-content {
+            width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+    row-gap: 0.1em;
+        }
+        .ads-content p {
+            font-size: 12px;
+    color: #262626;
+        }
+        .foot-top {
+            bottom: 6em;
+        }
